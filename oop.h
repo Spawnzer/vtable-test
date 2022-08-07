@@ -3,6 +3,7 @@ typedef struct OPERATION_VTABLE {
 	int (*sub)(int a, int b);
 	int (*mul)(int a, int b);
 	int (*div)(int a, int b);
+	void (*free)( struct OPERATION_VTABLE *vtable);
 } OPERATION_VTABLE;
 
 typedef struct fnc
