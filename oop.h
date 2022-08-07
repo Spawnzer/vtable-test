@@ -6,8 +6,7 @@ typedef struct OPERATION_VTABLE {
 	void (*free)( struct OPERATION_VTABLE *vtable);
 } OPERATION_VTABLE;
 
-typedef struct fnc
-{
+typedef struct fcn{
 	int res;
 	int init;
 	OPERATION_VTABLE *vtable;
