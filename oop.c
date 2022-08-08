@@ -31,11 +31,11 @@ OPERATION_VTABLE *init_vtable()
 {
 	OPERATION_VTABLE *vtable = malloc(sizeof(OPERATION_VTABLE));
 
-	vtable->add = addi;
-	vtable->div = divi;
-	vtable->sub = subs;
-	vtable->mul = mult;
-	vtable->free = freeVtable;
+	vtable->add = &addi;
+	vtable->div = &divi;
+	vtable->sub = &subs;
+	vtable->mul = &mult;
+	vtable->free = &freeVtable;
 	return vtable;
 }
 
